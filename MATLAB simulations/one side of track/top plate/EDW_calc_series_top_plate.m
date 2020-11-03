@@ -43,16 +43,16 @@ Bxy_s = 2.*sqrt(-1).*By_s; % source B-field Bx_s + j*By_s
 
 % fourier transformed field on the conducting plate
 gamma = sqrt((eta.^2) - sqrt(-1).*mu_o.*sigma.*(rspeede - vx.*eta)); % constant from fourier transform of B field on the conducting plate
-denom2 = (gamma*exp(gamma*b)) + (eta*(exp(gamma*b))) + (gamma*exp(-gamma*b)) - (eta*exp(-gamma*b)); % denominator part of the fourier transform
+denom2 = (gamma*exp(gamma*b)) + (eta*(exp(gamma*b))) - (gamma*exp(-gamma*b)) + (eta*exp(-gamma*b)); % denominator part of the fourier transform
 
 % magnetic vector potential from the conducting plate Az at y = b (surface
 % of plate)
-T = (exp(gamma.*b) - exp(-gamma.*b))./(denom2); %"transmission function" of the source field
+T = (exp(gamma.*b) + exp(-gamma.*b))./(denom2); %"transmission function" of the source field
 Az = T.*Bxy_s; % magnetic vector potential A in the conducting region
 
 % finding Bx, By and their conjugates for the B field from the conducting
 % plate
-Bx = (gamma.* exp(gamma.*b) + gamma*exp(-gamma.*b)).*Bxy_s./denom2; % B-field in the x-dir
+Bx = (gamma.* exp(gamma.*b) - gamma*exp(-gamma.*b)).*Bxy_s./denom2; % B-field in the x-dir
 By = -sqrt(-1).*eta.*T.*Bxy_s; % B-field on the conducting plate in the y-dir
 Bx_conj = conj(Bx); % complex conjugate of Bx
 By_conj = conj(By); % complex conjugate of By
