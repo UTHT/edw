@@ -55,10 +55,10 @@ airZ = wheelsLength / 2.0 + airZClearance
 airRailBoundary = 1
 airResolution = 8
 aluminiumResolution = 6
-magnetResolution = 7
+magnetResolution = 1
 railSurfaceResolution = 3
 plateSurfaceResolution = 3
-magnetFaceResolution = 3
+magnetFaceResolution = 1
 useHAdaption = False
 usePAdaption = False
 
