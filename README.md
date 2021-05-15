@@ -6,5 +6,5 @@
 ## SimCenter MagNET folder
 * 2D model 
 * 3D model
-  *  transient analysis (rotation and translation of the wheel)
-  *  static analysis of the wheel (forces and field from stationary wheel)
+  *  transient analysis (rotation and translation of the wheel - HybridEDW.vbs)
+  *  static analysis of the wheel (forces and field from stationary wheel - HybridEDW_static2.vbs)
